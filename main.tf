@@ -21,6 +21,7 @@ resource "azurerm_container_registry" "acr" {
   resource_group_name = azurerm_resource_group.acr.name
   location            = var.location
   sku                 = "Basic"
+  admin_enabled       = true
 }
 
 resource "azurerm_role_assignment" "acrpull" {
